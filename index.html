@@ -377,7 +377,7 @@ a.soc:hover, a.soc:focus-visible{ transform: translateY(-2px) scale(1.08); }
       title: 'R(at)PG', kicker: 'Kenshi meets Slay the Spire', color: '#FFB347',
       card: { meta: 'Personal · solo · prototype', line: 'Click-to-move exploration with card-based combat and (de)buffs.', img: 'ratpg' },
       teaser: ['Real-time card combat where your gear is your deck', 'How combat works, the gear-based deck and the (de)buff system'],
-      tags: ['Personal project', 'Solo dev', 'Prototype'], badge: true,
+      tags: ['Personal project', 'Solo dev', 'Prototype'], badge: true, trailer: 'rp', trailerLabel: 'Gameplay',
       shots: [['ratpg', 'A rat character standing in tall grass']],
       h2: 'Kenshi meets Slay the Spire',
       paras: ['This is a work-in-progress prototype, but it already has a robust and expandable combat system.', 'The main idea is to mix click-to-move movement with card-based combat, with a slurry of (de)buffs to use in combat.', 'I worked on this project for fun over the summer break.'],
@@ -530,11 +530,11 @@ a.soc:hover, a.soc:focus-visible{ transform: translateY(-2px) scale(1.08); }
         loop(['Get a helper', 'Drag them to where they’re needed', 'Gather & fight automatically', 'Fill a bar, earn helpers or upgrades'], 1, '↺ survive the next wave') +
         '<section class="wrap pad-l">' + highlightHead('Getting the drag right, in three versions', 'If grabbing a helper doesn’t feel good, nothing else matters. It took three versions to get there.') +
         '<div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:28px">' + vs.map(function (v, i) { return '<div class="panel' + (v[3] ? ' hl' : '') + ' rise" style="' + d(380 + i * 50) + ';flex:1 1 260px;min-width:0"><div class="mini-h acc">' + v[0] + '</div><div style="font-size:20px;font-weight:800;margin-top:6px">' + v[1] + '</div><p class="mini-p" style="font-size:15px">' + v[2] + '</p></div>'; }).join('') + '</div>' +
-        '</section>' +
+        '<video class="rise" autoplay muted loop playsinline controls preload="auto" aria-label="Save The Townhall gameplay showing the drag in action" style="' + d(520) + ';display:block;margin-top:16px;width:100%;aspect-ratio:16/9;background:#000;border-radius:16px;border:2px solid var(--line)"><source src="' + VID.stt + '" type="video/mp4"></video></section>' +
         '<section class="wrap pad-m">' + note('Design note', 'Progress bars and the shop', 'A UI question that turned into an economy decision', [['The problem', 'Each helper gathered on its own timer. Individual bars were messy and pointless with many helpers, and a shared bar meant reworking and rebalancing the whole gathering system.'], ['The call', 'Make bars goal-based: owned amount over the next goal. Food fills toward a new helper; gold fills toward a choice of 3 random upgrades. That removed the shop entirely and gave every bar a clear reward.']], 540) + '</section>' +
         '<section class="wrap pad-s"><h3 class="h-sec rise" style="' + d(560) + '">Other decisions</h3><div class="grid-auto">' + calls.map(function (c, i) { return '<div class="panel pop" style="' + d(580 + i * 60) + ';padding:18px"><div style="font-size:18px;font-weight:800">' + c[0] + '</div><p class="mini-p" style="font-size:15px">' + c[1] + '</p></div>'; }).join('') + '</div></section>' +
         timeline(tl, 600) +
-        slots([], 640, [['st2', 'Early run: one helper gathering food next to the townhall']]) +
+        
         '<section class="wrap pad-s"><div class="panel hl rise" style="' + d(700) + ';padding:26px"><h3 style="font-size:22px;font-weight:800;margin-bottom:14px">Looking back</h3><div class="cols"><div><div class="mini-h acc">Prioritised, not forgotten</div><p class="mini-p">There’s no win condition yet. I chose to spend the time on XL upgrades and reinforcements instead, and fixed endless outscaling in the final balance pass.</p></div><div><div class="mini-h acc">What’s next</div><p class="mini-p">More enemy and helper types (the top playtest wish), a big helper that plays differently rather than just hitting harder, and more strategy late in a run.</p></div></div></div></section>';
     },
 
